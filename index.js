@@ -5,7 +5,7 @@ require("./db")
 const roomRouter = require("./Routes/roomRoutes")
 const bookingController = require("./controller/bookingController")
 const showBookingsController = require("./controller/showBookingsController")
-
+const flightRouter = require("./Routes/flightRouter")
 
  // assuming Booking is in models folder
 
@@ -15,10 +15,8 @@ app.use(express.json())
 
 app.use("/room",roomRouter)
 app.use("/book",bookingController)
-
-
-
-app.get('/showbookings',showBookingsController )
+app.use('/showbookings',showBookingsController)
+app.use("/flight",flightRouter)
 
 app.listen(process.env.PORT,()=>{
     console.log("server is running on port 3000")

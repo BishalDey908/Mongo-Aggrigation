@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-mongoose.connect(process.env.DB_Connection)
+mongoose.connect(process.env.DB_Conntection)
 .then(()=>{
     console.log("connected")
 })
