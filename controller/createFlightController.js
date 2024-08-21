@@ -5,7 +5,7 @@ const createFlightController = async(req,res) =>{
     try{
           const response = await flightModuleModel.create({flight_number,departure_date,departure_time,status})
           if(response){
-              return res.status(200).json({"msg":"Flight module created","data":response})
+              res.status(200).json({"msg":"Flight module created","data":response})
           }else{
             return res.status(200).json({"msg":"Flight module not created","data":response})
           }
